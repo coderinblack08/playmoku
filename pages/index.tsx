@@ -1,6 +1,7 @@
 import React from "react";
 import { Button } from "../components/Button";
 import { LobbyNavigation } from "../components/LobbyNavigation";
+import { GameModal } from "../modules/lobby/GameModal";
 import { Navbar } from "../components/Navbar";
 
 const Index: React.FC = () => {
@@ -17,7 +18,7 @@ const Index: React.FC = () => {
         <div className="grid grid-cols-[5fr,3fr] gap-10 mt-4">
           <main></main>
           <aside className="space-y-4">
-            <Button className="w-full">Create Game</Button>
+            <GameModal />
             <Button className="w-full" color="secondary">
               Play Against a Friend
             </Button>

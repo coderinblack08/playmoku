@@ -34,11 +34,11 @@ export const Button: React.FC<ButtonProps> = ({
 }) => {
   return (
     <button
-      className={`${sizes[size]} ${colors[color]} focus:outline-none focus-visible:ring inline-flex items-center justify-center transition font-dm ${className}`}
+      className={`${sizes[size]} ${colors[color]} focus:outline-none focus-visible:ring inline-flex items-center justify-center transition ${className}`}
       {...props}
     >
       {icon && <span className={children ? "mr-2" : ""}>{icon}</span>}
-      <span>{children}</span>
+      <span className="font-semibold">{children}</span>
     </button>
   );
 };

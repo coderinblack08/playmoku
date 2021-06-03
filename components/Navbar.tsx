@@ -13,24 +13,24 @@ export const Navbar: React.FC<NavbarProps> = ({}) => {
   return (
     <nav className="flex items-center justify-between max-w-7xl mx-auto py-8 px-5">
       <a href="/">
-        <h1 className="text-2xl font-bold font-dm">
-          Play<span className="text-gray-400">Moku</span>
+        <h1 className="text-2xl font-bold">
+          Play<span className="text-gray-400 font-bold">Moku</span>
         </h1>
       </a>
       <ul className="flex items-center space-x-10">
         <li>
           <button className="flex items-center space-x-1.5">
-            <span className="text-gray-200 font-dm">Lobby</span>
+            <span className="text-gray-200">Lobby</span>
             <MdKeyboardArrowDown className="text-gray-400 w-5 h-5" />
           </button>
         </li>
         <li>
-          <a href="#" className="text-gray-200 font-dm">
+          <a href="#" className="text-gray-200">
             Learn
           </a>
         </li>
         <li>
-          <a href="#" className="text-gray-200 font-dm">
+          <a href="#" className="text-gray-200">
             <span className="mr-3">🏆</span> Podium
           </a>
         </li>

@@ -5,6 +5,16 @@ module.exports = {
   theme: {
     fontFamily: {
       sans: [
+        "Inter",
+        "-apple-system",
+        "BlinkMacSystemFont",
+        "Segoe UI",
+        "Roboto",
+        "Helvetica",
+        "Arial",
+        "sans-serif",
+      ],
+      dm: [
         "DM Sans",
         "-apple-system",
         "BlinkMacSystemFont",

@@ -1,3 +1,4 @@
+@import url("https://rsms.me/inter/inter.css");
 @import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&display=swap");
 
 @tailwind base;
@@ -7,12 +8,16 @@
 @layer base {
   :root {
     font-size: 14px;
-    @apply text-white;
+    @apply text-white tracking-tight antialiased;
   }
 
   #__next,
   body,
   html {
     @apply bg-gray-900;
+  }
+
+  * {
+    @apply font-medium font-dm;
   }
 }

@@ -1,0 +1,81 @@
+[debug] [2021-06-03T22:04:16.616Z] ----------------------------------------------------------------------
+[debug] [2021-06-03T22:04:16.618Z] Command:       /Users/kevin/.nvm/versions/node/v15.13.0/bin/node /usr/local/bin/firebase emulators:start
+[debug] [2021-06-03T22:04:16.618Z] CLI Version:   9.11.0
+[debug] [2021-06-03T22:04:16.619Z] Platform:      darwin
+[debug] [2021-06-03T22:04:16.619Z] Node Version:  v15.13.0
+[debug] [2021-06-03T22:04:16.620Z] Time:          Thu Jun 03 2021 15:04:16 GMT-0700 (Pacific Daylight Time)
+[debug] [2021-06-03T22:04:16.620Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2021-06-03T22:04:16.627Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2021-06-03T22:04:16.627Z] > authorizing via signed-in user (kevinlu.email@gmail.com)
+[info] i  emulators: Starting emulators: auth, database {"metadata":{"emulator":{"name":"hub"},"message":"Starting emulators: auth, database"}}
+[debug] [2021-06-03T22:04:16.643Z] [hub] writing locator at /var/folders/60/fqh5kt851rb5tc2mq3w37fj00000gn/T/hub-playmoku-bbcc9.json
+[debug] [2021-06-03T22:04:16.650Z] > refreshing access token with scopes: []
+[debug] [2021-06-03T22:04:16.651Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[debug] [2021-06-03T22:04:16.787Z] <<< HTTP RESPONSE 200 {"pragma":"no-cache","expires":"Mon, 01 Jan 1990 00:00:00 GMT","date":"Thu, 03 Jun 2021 22:04:16 GMT","cache-control":"no-cache, no-store, max-age=0, must-revalidate","content-type":"application/json; charset=utf-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","server":"scaffolding on HTTPServer2","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2021-06-03T22:04:16.848Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/playmoku-bbcc9 [none]
+[debug] [2021-06-03T22:04:17.063Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/playmoku-bbcc9 200
+[debug] [2021-06-03T22:04:17.063Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/playmoku-bbcc9 {"projectId":"playmoku-bbcc9","projectNumber":"200131450444","displayName":"playmoku","name":"projects/playmoku-bbcc9","resources":{"hostingSite":"playmoku-bbcc9","realtimeDatabaseInstance":"playmoku-bbcc9-default-rtdb"},"state":"ACTIVE"}
+[debug] [2021-06-03T22:04:17.063Z] database rules config:  [{"instance":"playmoku-bbcc9-default-rtdb","rules":"/Users/kevin/code/playmoku/database.rules.json"}]
+[debug] [2021-06-03T22:04:17.066Z] Ignoring unsupported arg: projectId {"metadata":{"emulator":{"name":"database"},"message":"Ignoring unsupported arg: projectId"}}
+[debug] [2021-06-03T22:04:17.066Z] Ignoring unsupported arg: auto_download {"metadata":{"emulator":{"name":"database"},"message":"Ignoring unsupported arg: auto_download"}}
+[debug] [2021-06-03T22:04:17.066Z] Ignoring unsupported arg: rules {"metadata":{"emulator":{"name":"database"},"message":"Ignoring unsupported arg: rules"}}
+[debug] [2021-06-03T22:04:17.066Z] Starting Database Emulator with command {"binary":"java","args":["-Duser.language=en","-jar","/Users/kevin/.cache/firebase/emulators/firebase-database-emulator-v4.7.2.jar","--host","localhost","--port",9000],"optionalArgs":["port","host","functions_emulator_port","functions_emulator_host"],"joinArgs":false} {"metadata":{"emulator":{"name":"database"},"message":"Starting Database Emulator with command {\"binary\":\"java\",\"args\":[\"-Duser.language=en\",\"-jar\",\"/Users/kevin/.cache/firebase/emulators/firebase-database-emulator-v4.7.2.jar\",\"--host\",\"localhost\",\"--port\",9000],\"optionalArgs\":[\"port\",\"host\",\"functions_emulator_port\",\"functions_emulator_host\"],\"joinArgs\":false}"}}
+[info] i  database: Database Emulator logging to database-debug.log {"metadata":{"emulator":{"name":"database"},"message":"Database Emulator logging to \u001b[1mdatabase-debug.log\u001b[22m"}}
+[debug] [2021-06-03T22:04:18.976Z] WARNING: An illegal reflective access operation has occurred
+WARNING: Illegal reflective access by io.netty.util.internal.ReflectionUtil (file:/Users/kevin/.cache/firebase/emulators/firebase-database-emulator-v4.7.2.jar) to field sun.nio.ch.SelectorImpl.selectedKeys
+WARNING: Please consider reporting this to the maintainers of io.netty.util.internal.ReflectionUtil
+WARNING: Use --illegal-access=warn to enable warnings of further illegal reflective access operations
+WARNING: All illegal access operations will be denied in a future release
+ {"metadata":{"emulator":{"name":"database"},"message":"WARNING: An illegal reflective access operation has occurred\nWARNING: Illegal reflective access by io.netty.util.internal.ReflectionUtil (file:/Users/kevin/.cache/firebase/emulators/firebase-database-emulator-v4.7.2.jar) to field sun.nio.ch.SelectorImpl.selectedKeys\nWARNING: Please consider reporting this to the maintainers of io.netty.util.internal.ReflectionUtil\nWARNING: Use --illegal-access=warn to enable warnings of further illegal reflective access operations\nWARNING: All illegal access operations will be denied in a future release\n"}}
+[debug] [2021-06-03T22:04:19.710Z] 15:04:19.709 [NamespaceSystem-akka.actor.default-dispatcher-4] INFO akka.event.slf4j.Slf4jLogger - Slf4jLogger started
+ {"metadata":{"emulator":{"name":"database"},"message":"15:04:19.709 [NamespaceSystem-akka.actor.default-dispatcher-4] INFO akka.event.slf4j.Slf4jLogger - Slf4jLogger started\n"}}
+[debug] [2021-06-03T22:04:19.877Z] 15:04:19.877 [main] INFO com.firebase.server.forge.App$ - Listening at localhost:9000
+ {"metadata":{"emulator":{"name":"database"},"message":"15:04:19.877 [main] INFO com.firebase.server.forge.App$ - Listening at localhost:9000\n"}}
+[warn] ⚠  ui: Emulator UI unable to start on port 4000, starting on 4001 instead. {"metadata":{"emulator":{"name":"ui"},"message":"Emulator UI unable to start on port 4000, starting on 4001 instead."}}
+[debug] [2021-06-03T22:04:23.671Z] Ignoring unsupported arg: auto_download {"metadata":{"emulator":{"name":"ui"},"message":"Ignoring unsupported arg: auto_download"}}
+[debug] [2021-06-03T22:04:23.671Z] Ignoring unsupported arg: port {"metadata":{"emulator":{"name":"ui"},"message":"Ignoring unsupported arg: port"}}
+[debug] [2021-06-03T22:04:23.671Z] Starting Emulator UI with command {"binary":"node","args":["/Users/kevin/.cache/firebase/emulators/ui-v1.5.0/server.bundle.js"],"optionalArgs":[],"joinArgs":false} {"metadata":{"emulator":{"name":"ui"},"message":"Starting Emulator UI with command {\"binary\":\"node\",\"args\":[\"/Users/kevin/.cache/firebase/emulators/ui-v1.5.0/server.bundle.js\"],\"optionalArgs\":[],\"joinArgs\":false}"}}
+[info] i  ui: Emulator UI logging to ui-debug.log {"metadata":{"emulator":{"name":"ui"},"message":"Emulator UI logging to \u001b[1mui-debug.log\u001b[22m"}}
+[debug] [2021-06-03T22:04:23.855Z] Web / API server started at http://localhost:4001
+ {"metadata":{"emulator":{"name":"ui"},"message":"Web / API server started at http://localhost:4001\n"}}
+[debug] [2021-06-03T22:04:23.947Z] >>> HTTP REQUEST PUT http://localhost:9000/.settings/rules.json?ns=playmoku-bbcc9-default-rtdb  
+ {
+  "rules": {
+    "users": {
+      "$uid": {
+        ".read": true,
+        ".write": "$uid === auth.uid"
+      }
+    },
+    "games": {
+      ".write": true,
+      ".read": true,
+      "host": {
+        ".validate": "newData.val() === auth.uid"
+      }
+    }
+  }
+}
+
+[debug] [2021-06-03T22:04:24.362Z] <<< HTTP RESPONSE 200 {"content-length":"15","content-type":"application/json; charset=utf-8","access-control-allow-origin":"*","cache-control":"no-cache","x-firebase-project-id":"playmoku-bbcc9-default-rtdb","x-firebase-project-number":"123456789","x-firebase-uuid":"c677dbeb-e096-422f-8b3c-bdc3ab014a64"}
+[info] 
+┌─────────────────────────────────────────────────────────────┐
+│ ✔  All emulators ready! It is now safe to connect your app. │
+│ i  View Emulator UI at http://localhost:4001                │
+└─────────────────────────────────────────────────────────────┘
+
+┌────────────────┬────────────────┬────────────────────────────────┐
+│ Emulator       │ Host:Port      │ View in Emulator UI            │
+├────────────────┼────────────────┼────────────────────────────────┤
+│ Authentication │ localhost:9099 │ http://localhost:4001/auth     │
+├────────────────┼────────────────┼────────────────────────────────┤
+│ Database       │ localhost:9000 │ http://localhost:4001/database │
+└────────────────┴────────────────┴────────────────────────────────┘
+  Emulator Hub running at localhost:4400
+  Other reserved ports: 4500
+
+Issues? Report them at https://github.com/firebase/firebase-tools/issues and attach the *-debug.log files.
+ 
+[warn] ⚠  Received a signed JWT. Auth Emulator does not validate JWTs and IS NOT SECURE {"metadata":{"emulator":{"name":"auth"},"message":"Received a signed JWT. Auth Emulator does not validate JWTs and IS NOT SECURE"}}

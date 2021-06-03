@@ -25,3 +25,7 @@
     @apply text-red-500 hover:text-red-400 hover:underline transition;
   }
 }
+
+.firebase-emulator-warning {
+  display: none;
+}

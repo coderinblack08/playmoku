@@ -1,33 +1,18 @@
 import { Dialog, RadioGroup } from "@headlessui/react";
+import firebase from "firebase/app";
+import "firebase/database";
 import React, { useState } from "react";
 import { Button } from "../../components/Button";
 import { Modal } from "../../components/Modal";
+import { useUser } from "../../lib/userContext";
+import { Time, timeObjectToString, times } from "../../lib/utils";
 
 interface GameModalProps {}
 
-const times = [
-  {
-    value: { time: 1, bonus: 0 },
-    type: "Bullet",
-  },
-  {
-    value: { time: 3, bonus: 0 },
-    type: "Blitz",
-  },
-  {
-    value: { time: 5, bonus: 0 },
-    type: "Blitz",
-  },
-  {
-    value: { time: 10, bonus: 0 },
-    type: "Rapid",
-  },
-];
-
 export const GameModal: React.FC<GameModalProps> = ({}) => {
-  const [open, setOpen] = useState(true);
-  const [time, setTime] =
-    useState<{ time: number; bonus: number } | null>(null);
+  const user = useUser();
+  const [open, setOpen] = useState(false);
+  const [time, setTime] = useState<Time | null>(null);
 
   return (
     <>
@@ -60,7 +45,7 @@ export const GameModal: React.FC<GameModalProps> = ({}) => {
               {({ active, checked }) => (
                 <>
                   <RadioGroup.Label className="text-2xl font-bold font-sans">
-                    {Object.values(time.value).join("+")}
+                    {timeObjectToString(time.value)}
                   </RadioGroup.Label>
                   <RadioGroup.Description
                     as="span"
@@ -80,7 +65,20 @@ export const GameModal: React.FC<GameModalProps> = ({}) => {
             controls
           </label>
         </div>
-        <Button onClick={() => setOpen(false)} className="w-full">
+        <Button
+          onClick={async () => {
+            const ref = firebase.database().ref("games/");
+            const newGame = await ref.push();
+            await newGame.set({
+              time,
+              status: "waiting",
+              host: user?.id,
+              createdAt: firebase.database.ServerValue.TIMESTAMP,
+            });
+            setOpen(false);
+          }}
+          className="w-full"
+        >
           Create Game
         </Button>
       </Modal>

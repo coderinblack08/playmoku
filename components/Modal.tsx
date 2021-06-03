@@ -1,5 +1,6 @@
 import { Dialog, Transition } from "@headlessui/react";
 import React, { Fragment } from "react";
+import { MdClose } from "react-icons/md";
 
 interface ModalProps {
   open: boolean;
@@ -48,6 +49,12 @@ export const Modal: React.FC<ModalProps> = ({
             leaveTo="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95"
           >
             <div className="inline-block align-bottom border border-gray-800 bg-gray-900 rounded-lg text-left overflow-hidden shadow-xl transform transition-all sm:my-8 sm:align-middle sm:max-w-lg sm:w-full p-6">
+              <button
+                className="absolute top-0 right-0 m-4 focus:outline-none"
+                onClick={handleClose}
+              >
+                <MdClose className="text-gray-500" />
+              </button>
               {children}
             </div>
           </Transition.Child>

@@ -2,7 +2,7 @@
 
 ## Setup for Contributors
 
-Create a firebase project (enable realtime database as well as google and anonymous sign-in; copy security rules from database.rules) and enter the web app credentials into lib/`firebaseConfig.ts` to follow the structure
+Create a firebase project (enable realtime database as well as google and anonymous sign-in; copy security rules from database.rules) or use local emulators (coming soon) and enter the web app credentials into lib/`firebaseConfig.ts` to follow the structure
 
 ```ts
 export const config = {

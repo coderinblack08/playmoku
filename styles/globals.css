@@ -20,4 +20,8 @@
   * {
     @apply font-medium font-dm;
   }
+
+  a.link {
+    @apply text-red-500 hover:text-red-400 hover:underline transition;
+  }
 }

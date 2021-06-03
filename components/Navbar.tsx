@@ -31,7 +31,7 @@ export const Navbar: React.FC<NavbarProps> = ({}) => {
         </li>
         <li>
           <a href="#" className="text-gray-200">
-            <span className="mr-3">🏆</span> Podium
+            <span className="mr-2 text-sm">🏆</span> Podium
           </a>
         </li>
         <li>

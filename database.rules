@@ -5,6 +5,13 @@
         ".read": true,
         ".write": "$uid === auth.uid"
       }
+    },
+    "games": {
+      ".write": true,
+      ".read": true,
+      "host": {
+       	".validate": "newData.val() === auth.uid" 
+      }
     }
   }
 }

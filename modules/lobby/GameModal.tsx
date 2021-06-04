@@ -73,6 +73,7 @@ export const GameModal: React.FC<GameModalProps> = ({}) => {
               time,
               status: "waiting",
               host: user?.id,
+              board: new Array(15).fill(new Array(15).fill("empty")),
               createdAt: firebase.database.ServerValue.TIMESTAMP,
             });
             setOpen(false);

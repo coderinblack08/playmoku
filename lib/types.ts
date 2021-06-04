@@ -14,5 +14,6 @@ export interface Game {
   opponent: string;
   turn: string;
   time: Time;
+  board: ("empty" | "black" | "white")[][];
   createdAt: number;
 }

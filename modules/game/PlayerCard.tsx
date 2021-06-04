@@ -33,7 +33,7 @@ export const PlayerCard: React.FC<PlayerCardProps> = ({
         />
       )}
       <div>
-        <h6 className="text-lg font-bold">{user?.name} (Host)</h6>
+        <h6 className="text-lg font-bold">{user?.name}</h6>
         <p className="text-gray-400">{color}</p>
       </div>
     </div>

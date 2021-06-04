@@ -29,3 +29,7 @@
 .firebase-emulator-warning {
   display: none;
 }
+
+canvas {
+  border-radius: 8px;
+}

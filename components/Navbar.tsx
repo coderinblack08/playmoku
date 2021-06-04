@@ -1,10 +1,12 @@
 import firebase from "firebase/app";
 import "firebase/auth";
 import "firebase/database";
+import Link from "next/link";
 import React from "react";
 import { MdKeyboardArrowDown } from "react-icons/md";
 import { useUser } from "../lib/userContext";
 import { Button } from "./Button";
+import { UserDropdown } from "./UserDropdown";
 
 interface NavbarProps {}
 
@@ -12,11 +14,11 @@ export const Navbar: React.FC<NavbarProps> = ({}) => {
   const user = useUser();
   return (
     <nav className="flex items-center justify-between max-w-7xl mx-auto py-8 px-5">
-      <a href="/">
-        <h1 className="text-2xl font-bold">
+      <Link href="/">
+        <a className="text-2xl font-bold">
           Play<span className="text-gray-400 font-bold">Moku</span>
-        </h1>
-      </a>
+        </a>
+      </Link>
       <ul className="flex items-center space-x-10">
         <li>
           <button className="flex items-center space-x-1.5">
@@ -36,13 +38,7 @@ export const Navbar: React.FC<NavbarProps> = ({}) => {
         </li>
         <li>
           {user ? (
-            <div className="flex items-center space-x-4">
-              <img
-                alt={user?.name}
-                src={user?.profilePicture}
-                className="w-10 h-10 rounded-full"
-              />
-            </div>
+            <UserDropdown />
           ) : (
             <Button
               size="small"

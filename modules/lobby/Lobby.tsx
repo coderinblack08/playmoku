@@ -7,14 +7,18 @@ import { GameCard } from "./GameCard";
 interface LobbyProps {}
 
 export const Lobby: React.FC<LobbyProps> = ({}) => {
-  const [snapshots, loading, error] = useList(firebase.database().ref("games"));
+  const [snapshots, loading] = useList(firebase.database().ref("games"));
 
   return (
     <div>
       {loading ? (
         <div className="spinner-md mt-8" />
       ) : (
-        snapshots?.map((game) => <GameCard key={game.key} {...game.val()} />)
+        <div className="grid grid-cols-2 gap-4">
+          {snapshots?.map((game) => (
+            <GameCard key={game.key} id={game.key} {...game.val()} />
+          ))}
+        </div>
       )}
     </div>
   );

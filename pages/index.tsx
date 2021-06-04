@@ -16,7 +16,7 @@ const Index: React.FC = () => {
           <span className="text-red-500">realtime gomoku games</span>
         </h6>
         <LobbyNavigation />
-        <div className="grid grid-cols-[5fr,3fr] gap-10 mt-8">
+        <div className="grid grid-cols-[5fr,3fr] gap-12 mt-8">
           <main>
             <Lobby />
           </main>
